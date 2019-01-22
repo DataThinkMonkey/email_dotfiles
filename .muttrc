@@ -1,0 +1,42 @@
+# Replace full_name with actual full name
+# Replace emailid with your actual email id
+# add password for smtp_pass and imap_pass, or comment out for prompt.
+my_hdr From: full_name <emailid@mccneb.edu>
+set smtp_url="smtp://emailid@mccneb.edu@outlook.office365.com:587/"
+set ssl_force_tls = yes
+set smtp_authenticators = "login"
+set smtp_pass = "*************" #password
+set folder="imaps://emailid%40mccneb.edu@outlook.office365.com/"
+set imap_pass=  "**********" #password
+set spoolfile="+Inbox"
+set postponed="+Drafts"
+set record="+Sent Items"
+
+# Sanely handle html email 
+alternative_order text/plain text/html
+auto_view text/html
+
+## More settings
+
+# File storage settings
+
+set signature="~/.mutt/signature"
+
+# Text view first
+set pager_stop="yes"
+set smart_wrap="yes"
+alternative_order text/plain
+auto_view text/html
+set reverse_name=yes
+set reverse_realname=yes
+
+# Text editor
+#set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+set editor="vim"
+
+# Thread ordering
+set sort = 'threads'
+set sort_browser="reverse-date"
+set sort_aux="last-date-received"
+unset collapse_unread
+set index_format=" %?M?   ↳&%4C?   %Z      %D     %-15.15n    %s"
