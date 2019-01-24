@@ -1,9 +1,15 @@
 # Email Dotfiles <br>
-.muttrc and .pinerc configured for MCC Office 365 work email.
+.muttrc-mcc and .pinerc configured for MCC Office 365 work email.<br>
+.muttrc-gmail for gmail.<br>
 
 **Mutt** <br>
-Download and copy .mutt and .muttrc to $HOME dir.<br>
-Make changes as indicated in comments in .muttrc file. <br>
+*Work Email*<br>
+Download and copy .mutt and .muttrc-mcc to $HOME dir.<br>
+Make changes as indicated in comments in .muttrc-mcc file. <br>
+Use mutt -F .muttrc-mcc <br>
+*Gmail*<br>
+Followed instructions for 2FA from http://nidkil.me/2018/01/18/setting-up-mutt-to-send-mail-using-gmail-with-2fa-set/ <br>
+Use mutt -F .muttrc-gmail <br>
 
 **Alpine** <br>
 Download and copy .pinerc file to $HOME dir. <br>

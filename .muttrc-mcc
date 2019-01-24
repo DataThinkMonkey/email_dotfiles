@@ -37,6 +37,6 @@ set editor="vim"
 # Thread ordering
 set sort = 'threads'
 set sort_browser="reverse-date"
-set sort_aux="last-date-received"
+set sort_aux="reverse-last-date-received"
 unset collapse_unread
 set index_format=" %?M?   ↳&%4C?   %Z      %D     %-15.15n    %s"

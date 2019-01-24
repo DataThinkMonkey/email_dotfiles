@@ -1,0 +1,46 @@
+# Set up for 2FA gmail
+# Instruction found http://nidkil.me/2018/01/18/setting-up-mutt-to-send-mail-using-gmail-with-2fa-set/
+set realname = "Full Name"
+set from = "username@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+# Ensure TLS is enforced
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# Protocol: smtp for TLS (587), smtps for SSL (465)
+set smtp_url = "smtp://username@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = "*****************"
+set imap_user = "username@gmail.com"
+set imap_pass = "************"
+set imap_keepalive = 900
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set move = no
+
+# Needed to get and display mail (imap-fetch-mail)
+set editor = "vim"
+set charset = "utf-8"
+set record = ""
+
+# Text view first
+set pager_stop="yes"
+set smart_wrap="yes"
+alternative_order text/plain
+auto_view text/html
+set reverse_name=yes
+set reverse_realname=yes
+
+# Thread ordering
+set sort = 'threads'
+set sort_browser="reverse-date"
+set sort_aux="reverse-last-date-received"
+unset collapse_unread
+set index_format=" %?M?   ↳&%4C?   %Z      %D     %-15.15n    %s"
+
